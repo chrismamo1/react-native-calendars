@@ -76,6 +76,7 @@ class Day extends Component {
   render() {
     const containerStyle = [this.style.base];
     const textStyle = [this.style.text];
+    const outerStyle = [this.style.outerContainer];
 
     const marking = this.props.marking || {};
     const dot = this.renderDots(marking);
@@ -92,8 +93,10 @@ class Day extends Component {
       textStyle.push(this.style.todayText);
     }
     return (
-      <TouchableOpacity style={containerStyle} onPress={this.onDayPress}>
-        <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}</Text>
+      <TouchableOpacity style={outerStyle} onPress={this.onDayPress}>
+        <View style={containerStyle}>
+          <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}</Text>
+        </View>
         <View style={{flexDirection: 'row'}}>{dot}</View>
       </TouchableOpacity>
     );
