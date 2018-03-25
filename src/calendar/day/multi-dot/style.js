@@ -8,7 +8,7 @@ export default function styleConstructor(theme={}) {
   return StyleSheet.create({
     outerContainer: {
       width: 30,
-      height: 34,
+      height: 36,
       alignItems: 'center'
     },
     base: {
@@ -43,7 +43,7 @@ export default function styleConstructor(theme={}) {
     dot: {
       width: 6,
       height: 6,
-      marginTop: 1,
+      marginTop: 0,
       marginLeft: 1,
       marginRight: 1,
       borderRadius: 3,
