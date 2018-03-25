@@ -6,6 +6,11 @@ const STYLESHEET_ID = 'stylesheet.day.multiDot';
 export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
+    outerContainer: {
+      width: 30,
+      height: 34,
+      alignItems: 'center'
+    },
     base: {
       width: 30,
       height: 30,
